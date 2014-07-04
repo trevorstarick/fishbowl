@@ -4,7 +4,7 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 var dots;
 var speed;
 var color = 'black';
-
+var background_color = "white";
 (function() {
   var canvas = document.getElementById('canvas');
   canvas.width = window.innerWidth;
@@ -13,9 +13,7 @@ var color = 'black';
   canvas.style.display = 'block';
 
   var ctx = canvas.getContext('2d');
-  ctx.fillStyle = color;
   ctx.lineWidth = 0.1;
-  ctx.strokeStyle = color;
 
   dots = {
     sum: Math.ceil(Math.sqrt(canvas.area)) * 0.5,
@@ -82,6 +80,9 @@ var color = 'black';
   }
 
   function update() {
+    canvas.style.background = background_color;
+    ctx.fillStyle = color;
+    ctx.strokeStyle = color;
     animate();
     line();
   }
