@@ -17,9 +17,9 @@ var speed;
   ctx.strokeStyle = color;
 
   dots = {
-    sum: Math.ceil(Math.sqrt(canvas.area)) * 0.8,
+    sum: Math.ceil(Math.sqrt(canvas.area)) * 0.5,
     d_radius: Math.max(canvas.width, canvas.height),
-    distance: 10,
+    distance: 50,
     array: []
   };
 
