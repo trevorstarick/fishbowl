@@ -3,6 +3,8 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 
 var dots;
 var speed;
+var color = 'black';
+
 (function() {
   var canvas = document.getElementById('canvas');
   canvas.width = window.innerWidth;
@@ -10,7 +12,6 @@ var speed;
   canvas.area = canvas.width * canvas.height;
   canvas.style.display = 'block';
 
-  var color = 'black';
   var ctx = canvas.getContext('2d');
   ctx.fillStyle = color;
   ctx.lineWidth = 0.1;
